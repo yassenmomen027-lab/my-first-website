@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="حاتم لحضيري - معلم لغة إنجليزية محترف. تعلم الإنجليزية بسهولة مع أفضل طرق شرح حديثة. دروس أونلاين وبالحضور.">
+    <meta name="keywords" content="تعليم إنجليزي, معلم إنجليزي, كورسات إنجليزي, دروس خصوصية, English teacher, Hatem Lahdiri">
+    <meta name="author" content="حاتم لحضيري">
+    <meta property="og:title" content="حاتم لحضيري - معلم اللغة الإنجليزية">
+    <meta property="og:description" content="تعلم الإنجليزية بسهولة مع أفضل طرق شرح حديثة">
+    <meta property="og:type" content="website">
+    <title>حاتم لحضيري | معلم اللغة الإنجليزية</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1e3a5f;
+            --primary-light: #2c5282;
+            --secondary: #38b2ac;
+            --accent: #4299e1;
+            --light: #f7fafc;
+            --dark: #1a202c;
+            --gray: #718096;
+            --light-gray: #e2e8f0;
+            --white: #ffffff;
+            --gradient: linear-gradient(135deg, #1e3a5f 0%, #2c5282 50%, #38b2ac 100%);
+            --shadow: 0 10px 40px rgba(30, 58, 95, 0.15);
+            --shadow-hover: 0 20px 60px rgba(30, 58, 95, 0.25);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--light);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 5px;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo i {
+            color: var(--secondary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 1rem;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            right: 0;
+            width: 0;
+            height: 3px;
+            background: var(--secondary);
+            transition: width 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: var(--gradient);
+            position: relative;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 50%;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
+            animation: float 15s infinite ease-in-out reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(30px, -30px) scale(1.1); }
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--white);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            opacity: 0;
+            animation: slideInRight 1s ease forwards;
+        }
+
+        .hero-content .subtitle {
+            font-size: 1.5rem;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+            opacity: 0;
+            animation: slideInRight 1s ease 0.2s forwards;
+        }
+
+        .hero-content .description {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+            opacity: 0;
+            animation: slideInRight 1s ease 0.4s forwards;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            opacity: 0;
+            animation: slideInRight 1s ease 0.6s forwards;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        .btn-primary {
+            background: var(--white);
+            color: var(--primary);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid rgba(255,255,255,0.5);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        .hero-image {
+            position: relative;
+            opacity: 0;
+            animation: slideInLeft 1s ease 0.3s forwards;
+        }
+
+        .hero-image .image-wrapper {
+            width: 100%;
+            max-width: 450px;
+            height: 500px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0.05));
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.2);
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .hero-image .image-wrapper::before {
+            content: '👨‍🏫';
+            font-size: 8rem;
+            opacity: 0.9;
+        }
+
+        .hero-image .image-wrapper::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.3)"/><circle cx="80" cy="40" r="1.5" fill="rgba(255,255,255,0.2)"/><circle cx="40" cy="80" r="1" fill="rgba(255,255,255,0.3)"/></svg>');
+            background-size: 100px;
+            animation: patternMove 20s linear infinite;
+        }
+
+        @keyframes patternMove {
+            0% { background-position: 0 0; }
+            100% { background-position: 100px 100px; }
+        }
+
+        .floating-badge {
+            position: absolute;
+            background: var(--white);
+            padding: 0.8rem 1.5rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            animation: badgeFloat 3s ease-in-out infinite;
+        }
+
+        .badge-1 {
+            top: 10%;
+            left: -20px;
+            animation-delay: 0s;
+        }
+
+        .badge-2 {
+            bottom: 15%;
+            right: -10px;
+            animation-delay: 1.5s;
+        }
+
+        @keyframes badgeFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: 50%;
+            transform: translateX(50%);
+            width: 60px;
+            height: 4px;
+            background: var(--secondary);
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            color: var(--gray);
+            font-size: 1.1rem;
+            margin-top: 1.5rem;
+        }
+
+        .about {
+            background: var(--white);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image .img-placeholder {
+            width: 100%;
+            height: 450px;
+            background: linear-gradient(135deg, var(--light-gray), var(--light));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 6rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-image .img-placeholder::before {
+            content: '🎓';
+        }
+
+        .about-image .experience-badge {
+            position: absolute;
+            bottom: 30px;
+            left: -20px;
+            background: var(--primary);
+            color: var(--white);
+            padding: 1.5rem 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .experience-badge .years {
+            font-size: 2.5rem;
+            font-weight: 900;
+            display: block;
+        }
+
+        .experience-badge .text {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .about-content h3 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .about-content p {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .features-list {
+            list-style: none;
+            margin-top: 2rem;
+        }
+
+        .features-list li {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: var(--light);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .features-list li:hover {
+            transform: translateX(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .features-list li i {
+            width: 40px;
+            height: 40px;
+            background: var(--secondary);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--light-gray);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-light), var(--secondary));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: var(--white);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover .service-icon {
+            transform: rotate(5deg) scale(1.1);
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .service-card p {
+            color: var(--gray);
+            line-height: 1.7;
+        }
+
+        .testimonials {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonials .section-title h2,
+        .testimonials .section-title p {
+            color: var(--white);
+        }
+
+        .testimonials .section-title h2::after {
+            background: var(--secondary);
+        }
+
+        .testimonials-slider {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-5px);
+        }
+
+        .testimonial-card .stars {
+            color: #f6e05e;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            background: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .author-info h4 {
+            font-weight: 700;
+            margin-bottom: 0.2rem;
+        }
+
+        .author-info span {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .booking {
+            background: var(--white);
+        }
+
+        .booking-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .booking-info h3 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .booking-info p {
+            color: var(--gray);
+            margin-bottom: 2rem;
+        }
+
+        .booking-features {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .booking-feature {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--light);
+            border-radius: 10px;
+        }
+
+        .booking-feature i {
+            color: var(--secondary);
+            font-size: 1.2rem;
+        }
+
+        .booking-form {
+            background: var(--light);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--light-gray);
+            border-radius: 12px;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: var(--white);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 3px rgba(56, 178, 172, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1.2rem;
+            background: var(--gradient);
+            color: var(--white);
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(30, 58, 95, 0.3);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .contact-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border: 1px solid var(--light-gray);
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .contact-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.8rem;
+            color: var(--white);
+        }
+
+        .contact-card h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .contact-card p,
+        .contact-card a {
+            color: var(--gray);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .contact-card a:hover {
+            color: var(--secondary);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            width: 45px;
+            height: 45px;
+            background: var(--light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        .footer {
+            background: var(--primary);
+            color: var(--white);
+            padding: 3rem 2rem 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .footer p {
+            opacity: 0.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            margin-top: 2rem;
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25d366;
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4); }
+            50% { box-shadow: 0 5px 30px rgba(37, 211, 102, 0.7); }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--secondary);
+            display: block;
+        }
+
+        .stat-label {
+            color: var(--gray);
+            font-size: 0.95rem;
+            margin-top: 0.5rem;
+        }
+
+        @media (max-width: 968px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            .hero-btns {
+                justify-content: center;
+            }
+            .about-grid,
+            .booking-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .about-image .experience-badge {
+                left: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                width: 100%;
+                background: var(--white);
+                flex-direction: column;
+                padding: 2rem;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                gap: 1.5rem;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .mobile-menu-btn {
+                display: block;
+            }
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            .hero-content .subtitle {
+                font-size: 1.2rem;
+            }
+            .section {
+                padding: 4rem 1.5rem;
+            }
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            .services-grid,
+            .testimonials-slider,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+                bottom: 20px;
+                left: 20px;
+            }
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                حاتم لحضيري
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#about">عن المعلم</a></li>
+                <li><a href="#services">الخدمات</a></li>
+                <li><a href="#testimonials">آراء الطلاب</a></li>
+                <li><a href="#booking">الحجز</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>حاتم لحضيري</h1>
+                <p class="subtitle">معلم اللغة الإنجليزية</p>
+                <p class="description">تعلم الإنجليزية بسهولة مع أفضل طرق شرح حديثة. أقدم دروساً مخصصة تناسب كل المستويات، من المبتدئين حتى المتقدمين، مع التركيز على المحادثة والقواعد بأسلوب تفاعلي ومبسط.</p>
+                <div class="hero-btns">
+                    <a href="https://wa.me/201124753445" class="btn btn-primary" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        تواصل عبر واتساب
+                    </a>
+                    <a href="#booking" class="btn btn-secondary">
+                        <i class="fas fa-calendar-check"></i>
+                        احجز درسك الآن
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-wrapper"></div>
+                <div class="floating-badge badge-1">
+                    <i class="fas fa-users"></i>
+                    <span>+500 طالب</span>
+                </div>
+                <div class="floating-badge badge-2">
+                    <i class="fas fa-star"></i>
+                    <span>تقييم 5 نجوم</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section about" id="about">
+        <div class="about-grid">
+            <div class="about-image reveal">
+                <div class="img-placeholder"></div>
+                <div class="experience-badge">
+                    <span class="years">+8</span>
+                    <span class="text">سنوات خبرة</span>
+                </div>
+            </div>
+            <div class="about-content reveal">
+                <h3>عن المعلم حاتم لحضيري</h3>
+                <p>معلم لغة إنجليزية محترف بخبرة تمتد لأكثر من 8 سنوات في تدريس اللغة الإنجليزية للطلاب من مختلف الأعمار والمستويات. أؤمن بأن كل طالب لديه القدرة على إتقان اللغة الإنجليزية عندما يتم تقديم المحتوى بالطريقة المناسبة له.</p>
+                <p>أسعى دائماً لتطوير أساليب التدريس واستخدام أحدث التقنيات والوسائل التعليمية لجعل رحلة تعلم الإنجليزية ممتعة وفعالة. سواء كنت طالباً في المدرسة أو الجامعة، أو راشداً يسعى لتطوير مهاراته المهنية، فلدي البرنامج المناسب لك.</p>
+                <ul class="features-list">
+                    <li>
+                        <i class="fas fa-check"></i>
+                        <span>أسلوب تدريس مبسط وواضح يناسب جميع المستويات</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check"></i>
+                        <span>حصص تفاعلية تركز على المحادثة والتطبيق العملي</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check"></i>
+                        <span>متابعة مستمرة وتقييم دوري لتطور الطالب</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check"></i>
+                        <span>خبرة في تدريس طلاب المدارس والجامعات والكبار</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: var(--white); padding-top: 2rem; padding-bottom: 2rem;">
+        <div class="stats-grid reveal">
+            <div class="stat-item">
+                <span class="stat-number" data-target="500">0</span>
+                <div class="stat-label">طالب تم تدريسهم</div>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="8">0</span>
+                <div class="stat-label">سنوات خبرة</div>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="98">0</span>
+                <div class="stat-label">نسبة رضا الطلاب %</div>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="50">0</span>
+                <div class="stat-label">كورس متخصص</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="services">
+        <div class="section-title reveal">
+            <h2>الخدمات التعليمية</h2>
+            <p>نقدم مجموعة متكاملة من الخدمات التعليمية المصممة خصيصاً لتلبية احتياجاتك</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card reveal">
+                <div class="service-icon">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <h3>تعليم المحادثة</h3>
+                <p>تطوير مهارات التحدث والاستماع من خلال محادثات واقعية وحوارات تفاعلية تناسب مستواك.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-icon">
+                    <i class="fas fa-spell-check"></i>
+                </div>
+                <h3>قواعد اللغة</h3>
+                <p>شرح مبسط وعملي لقواعد اللغة الإنجليزية مع التركيز على التطبيق العملي وليس الحفظ فقط.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-icon">
+                    <i class="fas fa-seedling"></i>
+                </div>
+                <h3>كورسات للمبتدئين</h3>
+                <p>برنامج متكامل يبدأ من الصفر، يغطي الأساسيات بأسلوب تدريجي وممتع يناسب المبتدئين تماماً.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h3>كورسات متقدمة</h3>
+                <p>تطوير المهارات المتقدمة في الكتابة والقراءة والمحادثة الأكاديمية والمهنية.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-icon">
+                    <i class="fas fa-school"></i>
+                </div>
+                <h3>شرح للطلاب</h3>
+                <p>دعم طلاب المدارس والجامعات في مناهجهم الدراسية مع التركيز على النقاط الضعيفة.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-icon">
+                    <i class="fas fa-laptop"></i>
+                </div>
+                <h3>دروس أونلاين</h3>
+                <p>حصص مباشرة عبر الإنترنت بجودة عالية ومرونة في المواعيد تناسب جدولك الزمني.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section testimonials" id="testimonials">
+        <div class="section-title reveal">
+            <h2>آراء الطلاب</h2>
+            <p>ما يقوله طلابنا عن تجربتهم في التعلم معنا</p>
+        </div>
+        <div class="testimonials-slider">
+            <div class="testimonial-card reveal">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>"أستاذ حاتم من أفضل المعلمين الذين درست معهم. أسلوبه في الشرح مبسط جداً ويشرح القواعد بطريقة تجعلها سهلة الفهم. تحسنت محادثتي بشكل ملحوظ خلال 3 أشهر فقط!"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">أ</div>
+                    <div class="author-info">
+                        <h4>أحمد محمد</h4>
+                        <span>طالب جامعي</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card reveal">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>"كنت أخاف من المحادثة بالإنجليزية لكن مع الأستاذ حاتم اكتسبت الثقة. الحصص التفاعلية والأسلوب المرح جعل التعلم ممتعاً. أنصح به بشدة لكل من يريد تعلم الإنجليزية فعلياً."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">س</div>
+                    <div class="author-info">
+                        <h4>سارة علي</h4>
+                        <span>موظفة في شركة خاصة</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card reveal">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>"ابني كان يعاني في مادة الإنجليزية بالمدرسة وبعد شهرين من الدروس الخصوصية مع الأستاذ حاتم ارتفعت درجاته بشكل كبير. متابعته للطالب ومتابعة التطور شيء مميز جداً."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">ف</div>
+                    <div class="author-info">
+                        <h4>فاطمة أحمد</h4>
+                        <span>ولي أمر طالب</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section booking" id="booking">
+        <div class="section-title reveal">
+            <h2>احجز درسك الآن</h2>
+            <p>املأ النموذج وسأتواصل معك في أقرب وقت لتحديد الموعد المناسب</p>
+        </div>
+        <div class="booking-container">
+            <div class="booking-info reveal">
+                <h3>لماذا تختار دروسنا؟</h3>
+                <p>نقدم تجربة تعليمية متكاملة تركز على احتياجاتك الفردية مع مرونة في المواعيد وأساليب تدريس حديثة.</p>
+                <div class="booking-features">
+                    <div class="booking-feature">
+                        <i class="fas fa-clock"></i>
+                        <span>مواعيد مرنة تناسب جدولك</span>
+                    </div>
+                    <div class="booking-feature">
+                        <i class="fas fa-user-check"></i>
+                        <span>متابعة فردية لكل طالب</span>
+                    </div>
+                    <div class="booking-feature">
+                        <i class="fas fa-book-open"></i>
+                        <span>محتوى تعليمي مخصص</span>
+                    </div>
+                    <div class="booking-feature">
+                        <i class="fas fa-video"></i>
+                        <span>خيار الحضور أو الأونلاين</span>
+                    </div>
+                </div>
+            </div>
+            <form class="booking-form reveal" id="bookingForm">
+                <div class="form-group">
+                    <label for="name">الاسم الكامل *</label>
+                    <input type="text" id="name" name="name" required placeholder="أدخل اسمك الكامل">
+                </div>
+                <div class="form-group">
+                    <label for="phone">رقم الهاتف *</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="مثال: 01124753445">
+                </div>
+                <div class="form-group">
+                    <label for="level">المستوى الحالي *</label>
+                    <select id="level" name="level" required>
+                        <option value="">اختر مستواك</option>
+                        <option value="beginner">مبتدئ (Beginner)</option>
+                        <option value="elementary">أساسي (Elementary)</option>
+                        <option value="intermediate">متوسط (Intermediate)</option>
+                        <option value="advanced">متقدم (Advanced)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="time">الوقت المناسب *</label>
+                    <select id="time" name="time" required>
+                        <option value="">اختر الوقت المناسب</option>
+                        <option value="morning">صباحاً (9 ص - 12 ظ)</option>
+                        <option value="afternoon">ظهراً (12 ظ - 4 م)</option>
+                        <option value="evening">مساءً (4 م - 9 م)</option>
+                        <option value="weekend">عطلة نهاية الأسبوع</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="notes">ملاحظات إضافية</label>
+                    <textarea id="notes" name="notes" placeholder="اكتب أي ملاحظات أو أهداف تعليمية محددة..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i>
+                    إرسال طلب الحجز
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <div class="section-title reveal">
+            <h2>تواصل معنا</h2>
+            <p>نحن هنا للإجابة على جميع استفساراتك</p>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-card reveal">
+                <div class="contact-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <h3>واتساب</h3>
+                <a href="https://wa.me/201124753445" target="_blank">+20 11 24753445</a>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem;">متاح للرد السريع</p>
+            </div>
+            <div class="contact-card reveal">
+                <div class="contact-icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <h3>اتصال مباشر</h3>
+                <a href="tel:+201124753445">+20 11 247753445</a>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem;">من السبت إلى الخميس</p>
+            </div>
+            <div class="contact-card reveal">
+                <div class="contact-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h3>الموقع</h3>
+                <p>متاح للدروس الحضورية<br>والأونلاين عبر Zoom</p>
+            </div>
+            <div class="contact-card reveal">
+                <div class="contact-icon">
+                    <i class="fas fa-share-alt"></i>
+                </div>
+                <h3>وسائل التواصل</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-graduation-cap"></i> حاتم لحضيري
+            </div>
+            <p>معلم اللغة الإنجليزية - نساعدك على إتقان الإنجليزية بثقة</p>
+            <div class="footer-links">
+                <a href="#home">الرئيسية</a>
+                <a href="#about">عن المعلم</a>
+                <a href="#services">الخدمات</a>
+                <a href="#booking">الحجز</a>
+                <a href="#contact">تواصل معنا</a>
+            </div>
+            <div class="footer-bottom">
+                <p>جميع الحقوق محفوظة © 2026 | حاتم لحضيري</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/201124753445" class="whatsapp-float" target="_blank" aria-label="تواصل عبر واتساب">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            });
+        });
+
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        const statNumbers = document.querySelectorAll('.stat-number');
+
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = parseInt(entry.target.getAttribute('data-target'));
+                    animateCounter(entry.target, target);
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        statNumbers.forEach(stat => statsObserver.observe(stat));
+
+        function animateCounter(element, target) {
+            let current = 0;
+            const increment = target / 50;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target + (target === 98 ? '%' : '+');
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current) + (target === 98 ? '%' : '+');
+                }
+            }, 30);
+        }
+
+        const navbar = document.querySelector('.navbar');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.style.boxShadow = '0 2px 30px rgba(0,0,0,0.15)';
+            } else {
+                navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.08)';
+            }
+        });
+
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const phone = formData.get('phone');
+            const level = formData.get('level');
+            const time = formData.get('time');
+            const notes = formData.get('notes');
+
+            const message = `طلب حجز جديد من موقع حاتم لحضيري:%0A%0Aالاسم: ${name}%0Aالهاتف: ${phone}%0Aالمستوى: ${level}%0Aالوقت المفضل: ${time}%0Aملاحظات: ${notes || 'لا يوجد'}`;
+
+            window.open(`https://wa.me/201124753445?text=${message}`, '_blank');
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.style.opacity = '1';
+        });
+    </script>
+</body>
+</html>
